@@ -33,9 +33,12 @@ npm run test
 
 ```
 
+<img width="1661" alt="Screenshot 2023-11-13 at 15 51 38" src="https://github.com/natanfirst/mks-store-challenge/assets/74800473/b87a5495-cea6-469e-8704-906902570e79">
+
+
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
