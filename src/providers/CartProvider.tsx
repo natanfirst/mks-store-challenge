@@ -1,6 +1,6 @@
 "use client";
 import { Product } from "@/types/products";
-import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from "react";
+import { ReactNode, createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import toast from "react-hot-toast";
 
 export interface ProductTotal extends Product {
@@ -63,7 +63,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const totalDiscount = subtotal - total;
 
-  const addProductToCart = (product: ProductTotal) => {
+  const addProductToCart = useCallback((product: ProductTotal) => {
     toast.success("Produto adicionado !");
     const productIsAlreadyOnCart = products.some(
       (cartProduct) => cartProduct.id === product.id
@@ -87,7 +87,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     }
 
     setProducts((prev) => [...prev, product]);
-  };
+  },[products]);
 
   const decreaseProductQuantity = (productId: number) => {
     toast.success("Produto removido !");
