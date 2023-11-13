@@ -2,7 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### Environment Configuration
+
+Before running the project, you'll need to set up the environment variables by creating an `.env` file at the root of your project. You can use the `.env.example` file as a template to define the required variables. Here's an example of how the `.env` file should be configured:
+
+```plaintext
+NEXT_PUBLIC_BACKEND_URL=
+```
+
+Make sure to fill in the values according to your environment settings. These environment variables are essential for the proper functioning of the project and should be kept secret.
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -15,6 +25,13 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Run Tests
+
+```bash
+npm run test
+
+```
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
